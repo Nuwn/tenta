@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 /*inställning iconer*/
 .fa-times, .fa-bars {
   color: white;
@@ -177,7 +177,7 @@
 /*resterande sidor använder denna*/
 body {
   background-color: black;
-  }
+  background-image: url(/img/Black%20Background%20Wood%20Clean%20-%202560x1600%20by%20Freeman%20as%20Smart%20Object-1.jpg); }
 
 .container {
   display: -webkit-box;
