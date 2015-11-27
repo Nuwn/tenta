@@ -1,0 +1,145 @@
+@import 'nav';
+@import 'login'; 
+
+/*denna sida använder mixin som brytpunkt*/
+@mixin desk-width {
+  @media only screen and (min-width: 800px) {
+    @content;
+  }
+}
+/*resterande sidor använder denna*/
+$desktop-width: 'min-width:800px';
+
+
+body { 
+    background-color: black; 
+    background-image: url(/img/Black%20Background%20Wood%20Clean%20-%202560x1600%20by%20Freeman%20as%20Smart%20Object-1.jpg); 
+    
+}
+
+
+
+.container {
+    display:-webkit-box; 
+    display:-webkit-flex; 
+    display:-ms-flexbox; 
+    display:flex;
+    flex-direction: column;
+    position: relative; 
+    overflow: hidden;
+    
+    @include desk-width{
+        width: 80%;
+        margin:auto;
+        max-width: 1000px;
+    }
+    
+}  
+        
+   
+header{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    padding-top: 10px;
+    font-size: 25px;
+     
+    h1{
+        color:white;
+        font-family: fantasy;
+    }
+    @include desk-width{
+        justify-content: space-between;
+        padding-left: 10px;
+        
+        
+    }
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+  color: aliceblue;
+}
+.new-game{
+    width: 100%;
+    height: 70vh;
+}
+.redir {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 40vh;
+}
+
+.info_mobile{
+    @include desk-width{
+        display: none;
+    }
+    } 
+.info_desk{
+    display: none;
+    @include desk-width{
+        display: inline;
+    }
+    }
+ 
+.news{
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        margin: 10px;
+        background-color: #0f0f0f;
+        flex-direction: column;
+        align-items: center;
+        color: aliceblue;
+        border-radius: 5px;
+        border: 1px solid dodgerblue;
+        
+            
+        h1{
+            padding-top: 0.6em;
+            font-family: sans-serif;
+            font-size: 30px;}
+        h2{
+            font-size: 15px;
+            padding-bottom: 2px;
+        }
+        h3{
+            color: aliceblue;
+        } 
+    p{ 
+            padding-top: 0.6em;
+            font-family: sans-serif;}
+        img {
+            max-width: 100%;
+        }
+    
+        @include desk-width{
+            border-color: aliceblue;
+        }
+    }
+
+.news1{order:2; @include desk-width{order:0;}}
+.news2{ order:1; @include desk-width{order:1;}}
+.news3{ order: 3; @include desk-width{order:2;}}
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+
+
+

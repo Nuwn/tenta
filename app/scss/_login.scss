@@ -1,0 +1,16 @@
+.loginform {
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    height:30vh;
+    padding-top: 30px;
+    
+    #usermail, #password {
+        height: 15px;
+    }
+    #submitbtn, p {
+        margin: 5px;
+        
+    }
+    
+}
